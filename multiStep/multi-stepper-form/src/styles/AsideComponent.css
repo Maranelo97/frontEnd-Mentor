@@ -1,0 +1,52 @@
+.aside-steps {
+  padding: 2%;
+}
+
+.list-steps {
+  display: flex;
+  flex-direction: column;
+}
+
+.list-item {
+  margin-left: 8%;
+  margin-bottom: 4%;
+  margin-top: 4%;
+  display: flex;
+  align-items: center;
+}
+
+.number-step {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5rem;
+  font-weight: 600;
+  font-family: "Ubuntu";
+  border-radius: 50%;
+  border: 1px solid #fff;
+  width: 40px;
+  height: 40px;
+  padding: 0;
+  transition: 1s;
+}
+
+.step-info {
+  margin-left: 10%;
+}
+
+.step-info span {
+  font-family: "Ubuntu";
+  color: hsl(231, 11%, 63%);
+}
+
+.step-info p {
+  font-family: "Ubuntu";
+  font-weight: 600;
+  color: #ffffff;
+}
+
+.active-step {
+  background-color: hsl(228, 100%, 84%);
+  color: hsl(213, 96%, 18%);
+  border: none;
+}

@@ -1,0 +1,151 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+}
+.button-form {
+  background-color: hsl(213, 96%, 18%);
+  color: #fff;
+  width: 120px;
+  height: 40px;
+  padding: 1%;
+  border: none;
+  border-radius: 5px;
+  font-family: "Ubuntu";
+  font-weight: 600;
+  transition: 1s ease-in;
+}
+
+
+.button-form-white{
+  background-color: #ffffff;
+  color:  hsl(213, 96%, 18%);
+  width: 120px;
+  height: 40px;
+  padding: 1%;
+  border: none;
+  border-radius: 5px;
+  font-family: "Ubuntu";
+  font-weight: 600;
+  transition: 1s ease-in;
+}
+
+.button-form:hover {
+  background-color: #fff;
+  color: hsl(213, 96%, 18%);;
+  border: 1px solid hsl(213, 96%, 18%);
+  cursor: pointer;
+}
+
+.button-form-white:hover {
+  cursor: pointer;
+}
+
+.button-form[disabled] {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.button-form[disabled]:hover {
+  background-color: inherit;
+}
+
+.form-style {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 80%;
+  height: 60vh;
+  padding: 10%;
+}
+
+.input-flow {
+  display: flex;
+  flex-direction: column;
+}
+
+.input-flow label {
+  font-family: "Ubuntu";
+  margin-top: 5%;
+  margin-bottom: 5px;
+  font-size: 14px;
+  color: hsl(213, 96%, 18%);
+}
+
+.title-form {
+  color: hsl(213, 96%, 18%);
+  font-family: "Ubuntu";
+  font-size: 2rem;
+  text-align: left;
+  margin-top: 3%;
+  margin-bottom: 5px;
+}
+
+.provide-text {
+  color: hsl(231, 11%, 63%);
+  font-family: "Ubuntu";
+  font-size: 14px;
+}
+
+.form-input {
+  border-radius: 12px;
+  border: 1px solid hsl(231, 11%, 63%);
+  padding: 15px;
+  width: 100%;
+  font-size: 14px;
+  font-family: "Ubuntu";
+  transition: border 0.3s, box-shadow 0.3s;
+  color: hsl(213, 96%, 18%);
+  font-weight: 600;
+}
+
+.form-input::placeholder{
+  color: hsl(231, 11%, 63%);
+  font-size: 14px;
+  font-family: 'Ubuntu';
+}
+
+
+
+.form-input:focus {
+  border: 1px solid transparent; 
+  box-shadow: 0 0 5px rgb(90, 90, 230),
+ 0 0 5px rgb(90, 90, 230),
+   0 0 5px rgb(90, 90, 230);
+  outline: none; /
+}
+
+.button-container {
+  display: flex;
+  justify-content: space-between;
+  margin-right: 3%;
+  width: 70%;
+}
+
+.button-container-first {
+  display: flex;
+  justify-content: end;
+  margin-right: 3%;
+  width: 70%;
+}
+
+.tracking-in-expand {
+  animation: tracking-in-expand 0.7s linear both;
+}
+@keyframes tracking-in-expand {
+  0% {
+    letter-spacing: -0.2em;
+    opacity: 0;
+  }
+  40% {
+    opacity: 0.6;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+
+.scale-up-center{animation:scale-up-center 0.4s; } @keyframes scale-up-center{ 0%{transform:scale(.5)} 100%{transform:scale(1)} }
