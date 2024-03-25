@@ -28,7 +28,7 @@ function AsideComponent() {
           </div>
         </div>
         <div className="list-item">
-          <p className={`number-step ${activeStep === 4 ? "active-step" : ""}`}>4</p>
+          <p className={`number-step ${activeStep === 4 || activeStep === 5 ? "active-step" : ""}`}>4</p>
           <div className="step-info">
             <span>STEP 4</span>
             <p>SUMMARY</p>

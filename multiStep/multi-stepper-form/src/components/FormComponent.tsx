@@ -9,6 +9,7 @@ import { useState, ChangeEvent } from "react";
 import logoAdv from "../assets/icon-advanced.svg";
 import arcade from "../assets/icon-arcade.svg";
 import pro from "../assets/icon-pro.svg";
+import thnaks from "../assets/icon-thank-you.svg";
 import { AddOnsPicks } from "../models/AddOnsPicks";
 
 const FormComponent = () => {
@@ -319,19 +320,19 @@ const FormComponent = () => {
                 <div className="resume-content">
                   <div className="title-resume">
                     <div>
-                    <h5 className="type-plan">
-                      {setlectBox === true
-                        ? "Arcade"
-                        : setlectBox2 === true
-                        ? "Advanced"
-                        : setlectBox3 === true
-                        ? "Pro"
-                        : ""}{" "}
-                      {activeSwitch === false ? "(Monthly)" : "(Yearly)"}
-                    </h5>
-                    <span className="change-plan" onClick={goToSelectionPlan}>
-                      Change
-                    </span>
+                      <h5 className="type-plan">
+                        {setlectBox === true
+                          ? "Arcade"
+                          : setlectBox2 === true
+                          ? "Advanced"
+                          : setlectBox3 === true
+                          ? "Pro"
+                          : ""}{" "}
+                        {activeSwitch === false ? "(Monthly)" : "(Yearly)"}
+                      </h5>
+                      <span className="change-plan" onClick={goToSelectionPlan}>
+                        Change
+                      </span>
                     </div>
                     <span className="value-plan">
                       {setlectBox === true
@@ -373,6 +374,24 @@ const FormComponent = () => {
             >
               Confirm
             </button>
+          </div>
+        </div>
+      )}
+
+      {activeStep === 5 && (
+        <div className="container">
+          <div className="form-style-finale">
+            <img
+              src={thnaks}
+              alt="thank you icon scale-up-center"
+              className="img-ty"
+            />
+            <h5 className="ty-title scale-up-center">Thank you!</h5>
+            <p className="ty-p scale-up-center">
+              Thanks for confirming your subscription! We hope you have fun
+              using our platform. If you ever need support, please feel free to
+              mail us at support@loremgaming.com.
+            </p>
           </div>
         </div>
       )}
