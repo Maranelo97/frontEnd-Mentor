@@ -60,7 +60,7 @@
   justify-content: space-between;
   width: 80%;
   height: 60vh;
-  padding: 10%;
+  padding: 5%;
 }
 
 .input-flow {
@@ -193,6 +193,14 @@
   cursor: pointer;
 }
 
+.box-selected {
+  border: 1px solid transparent;
+  box-shadow: 0 0 5px rgb(90, 90, 230),
+    0 0 5px rgb(90, 90, 230),
+    0 0 5px rgb(90, 90, 230);
+  outline: none;
+}
+
 .box-logo {
   max-height: 40px;
   max-width: 40px;
@@ -281,6 +289,7 @@ input:checked + .slider:before {
   font-weight: bold;
   font-family: 'Ubuntu';
   font-size: 14px;
+  transition: 1s
 }
 
 .option.no{
@@ -288,4 +297,129 @@ input:checked + .slider:before {
 }
 .option.yes{
   margin-left: 6px;
+}
+
+.option-active{
+  color:  hsl(213, 96%, 18%);
+}
+
+.pick-adds{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 97%;
+  height: 45vh;
+}
+
+.pick{
+  border:1px solid hsl(243, 100%, 62%);
+  padding: 5%;
+  border-radius: 6px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: 1ms;
+}
+
+.check-form{
+  height: 20px;
+  width: 20px;
+  margin-right: 10px;
+}
+
+
+.content-pick {
+  display: flex;
+  width: 100%;
+  align-items: center;
+}
+
+.content-pick p{
+  font-family: 'Ubuntu';
+  font-weight: 600;
+  font-size: 14px;
+  color: hsl(213, 96%, 18%);
+}
+
+
+.content-pick span{
+  font-family: 'Ubuntu';
+  font-size: 14px;
+  color: hsl(231, 11%, 63%)
+}
+
+.pick-price {
+  font-family: 'Ubuntu';
+  font-size: 14px;
+  color: hsl(243, 100%, 62%);
+  font-weight: 400;
+}
+
+.resume{
+  width: 100%;
+  margin-top: 3%;
+  border-radius: 8px;
+  background-color:  hsl(231, 100%, 99%);
+  height: 30vh;
+  font-family: 'Ubuntu';
+}
+
+.resume-content {
+  padding: 5%;
+}
+
+.title-resume {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  padding: 3px;
+}
+
+.value-plan {
+  color: hsl(213, 96%, 18%);
+  font-weight: 600;
+  font-family: 'Ubuntu';
+}
+
+.type-plan {
+  font-family: 'Ubuntu';
+  font-size: 16px;
+  color: hsl(213, 96%, 18%);
+}
+
+.border {
+  background-color: hsl(231, 11%, 63%);
+  width: 100%;
+  height: 0.1px;
+  opacity: 0.2;
+  margin-top: 2%;
+  margin-bottom: 3%;
+}
+
+.change-plan {
+  font-family: 'Ubuntu';
+  font-size: 14px;
+  color: hsl(243, 100%, 62%);
+  transition: 1ms;
+}
+
+.change-plan:hover{
+  font-weight: 600;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.list-style {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.list-addons {
+  font-family: 'Ubuntu';
+  font-size: 14px;
+  color: hsl(231, 11%, 63%);
+  display: flex;
+  margin-top: 3%;
 }

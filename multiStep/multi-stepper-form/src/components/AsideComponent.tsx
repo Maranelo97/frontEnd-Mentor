@@ -1,5 +1,5 @@
 import "../styles/AsideComponent.css";
-import useStepStore from "../Store";
+import { useStepStore } from "../Store";
 
 function AsideComponent() {
   const activeStep = useStepStore((state) => state.activeStep);

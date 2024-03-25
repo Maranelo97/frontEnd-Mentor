@@ -26,13 +26,15 @@ body{
 
 .aside {
   height: 78vh;
-  width: 30%;
+  width: 40%;
   background-color: hsl(243, 100%, 62%);
   color: #ffffff;
-  padding: 3%;
+  padding: 2%;
   border-radius: 6px;
   position: relative;
   margin-left: 1%;
+  background-image: url('../src/assets/bg-sidebar-desktop.svg');
+  background-size: cover; /* Para ajustar la imagen de fondo al contenedor */
 }
 
 
