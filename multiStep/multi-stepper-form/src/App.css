@@ -38,21 +38,6 @@ body{
 }
 
 
-.svg-container {
-  position: absolute;
-  bottom: -4px;
-  left: 0;
-  width: 100%;
-}
-
-.svg-container svg{
-  border-radius: 6px;
-}
-
-.svg-container.second {
-  z-index: 1; 
-}
-
 .form-container {
   width: 100%;
   height: 78vh;
