@@ -4,7 +4,7 @@
 #root {
   max-width: 1280px;
   margin: 0 auto;
-  padding: 2rem;
+  padding: 1rem;
 }
 
 body{
@@ -33,8 +33,8 @@ body{
   border-radius: 6px;
   position: relative;
   margin-left: 1%;
-  background-image: url('../src/assets/bg-sidebar-desktop.svg');
-  background-size: cover; /* Para ajustar la imagen de fondo al contenedor */
+  background-image: url('./assets/bg-sidebar-desktop.svg');
+  background-size: cover;
 }
 
 
@@ -43,3 +43,27 @@ body{
   height: 78vh;
 }
 
+
+
+
+@media (max-width: 767px){
+  .stepper{
+    flex-direction: column;
+    width: 100%;
+  }
+  .aside{
+    width: 100%;
+    max-width: 600px;
+    background-image: url('./assets/bg-sidebar-mobile.svg');
+    background-size: cover;
+    margin-left: 0;
+    border-radius: 0;
+  }
+}
+
+
+@media (min-width: 768px) {
+  .stepper{
+    width: 90%;
+  }
+}

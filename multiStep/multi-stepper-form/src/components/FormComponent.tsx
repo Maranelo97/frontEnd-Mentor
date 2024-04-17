@@ -149,7 +149,7 @@ const FormComponent = () => {
             <div className="input-flow">
               <h5 className="title-form">Select your Plan</h5>
               <p className="provide-text">
-                You have the option of omthly or yearly billing.
+                You have the option of monthly or yearly billing.
               </p>
               <div className="boxes">
                 <div

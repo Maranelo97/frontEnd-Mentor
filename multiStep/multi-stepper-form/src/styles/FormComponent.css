@@ -275,11 +275,11 @@
   border-radius: 50%;
 }
 
-input:checked + .slider {
+input:checked+.slider {
   background-color: hsl(213, 96%, 18%);
 }
 
-input:checked + .slider:before {
+input:checked+.slider:before {
   transform: translateX(26px);
 }
 
@@ -292,18 +292,19 @@ input:checked + .slider:before {
   transition: 1s
 }
 
-.option.no{
+.option.no {
   margin-right: 6px;
 }
-.option.yes{
+
+.option.yes {
   margin-left: 6px;
 }
 
-.option-active{
-  color:  hsl(213, 96%, 18%);
+.option-active {
+  color: hsl(213, 96%, 18%);
 }
 
-.pick-adds{
+.pick-adds {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -311,8 +312,8 @@ input:checked + .slider:before {
   height: 45vh;
 }
 
-.pick{
-  border:1px solid hsl(243, 100%, 62%);
+.pick {
+  border: 1px solid hsl(243, 100%, 62%);
   padding: 5%;
   border-radius: 6px;
   display: flex;
@@ -321,7 +322,7 @@ input:checked + .slider:before {
   transition: 1ms;
 }
 
-.check-form{
+.check-form {
   height: 20px;
   width: 20px;
   margin-right: 10px;
@@ -334,7 +335,7 @@ input:checked + .slider:before {
   align-items: center;
 }
 
-.content-pick p{
+.content-pick p {
   font-family: 'Ubuntu';
   font-weight: 600;
   font-size: 14px;
@@ -342,7 +343,7 @@ input:checked + .slider:before {
 }
 
 
-.content-pick span{
+.content-pick span {
   font-family: 'Ubuntu';
   font-size: 14px;
   color: hsl(231, 11%, 63%)
@@ -355,11 +356,11 @@ input:checked + .slider:before {
   font-weight: 400;
 }
 
-.resume{
+.resume {
   width: 100%;
   margin-top: 3%;
   border-radius: 8px;
-  background-color:  hsl(231, 100%, 99%);
+  background-color: hsl(231, 100%, 99%);
   height: 30vh;
   font-family: 'Ubuntu';
 }
@@ -403,7 +404,7 @@ input:checked + .slider:before {
   transition: 1ms;
 }
 
-.change-plan:hover{
+.change-plan:hover {
   font-weight: 600;
   text-decoration: underline;
   cursor: pointer;
@@ -427,7 +428,7 @@ input:checked + .slider:before {
 .form-style-finale {
   display: flex;
   flex-direction: column;
-  justify-content:  center;
+  justify-content: center;
   align-items: center;
   width: 100%;
   height: 60vh;
@@ -439,7 +440,7 @@ input:checked + .slider:before {
   max-height: 25%;
 }
 
-.ty-title{
+.ty-title {
   font-size: 2rem;
   color: hsl(213, 96%, 18%);
   font-family: 'Ubuntu';
@@ -453,4 +454,45 @@ input:checked + .slider:before {
   text-align: center;
   margin-top: 13px;
   font-size: 14px;
+}
+
+@media (max-width: 767px) {
+
+  .form-style {
+    padding: 0;
+  }
+
+  .title-form {
+    font-size: 1.3rem;
+  }
+
+  .provide-text {
+    font-size: 12px;
+  }
+
+  .button-container-first {
+    margin-bottom: 10%;
+  }
+
+  .boxes {
+    flex-direction: column;
+  }
+
+  .box {
+    height: 10vh;
+    margin-bottom: 3px;
+  }
+
+  .box-content {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .switcher {
+    width: 100%;
+  }
+
+  .button-container {
+    margin-bottom: 13%;
+  }
 }

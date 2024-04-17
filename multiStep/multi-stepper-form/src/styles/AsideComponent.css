@@ -50,3 +50,21 @@
   color: hsl(213, 96%, 18%);
   border: none;
 }
+
+
+
+@media (max-width: 767px){
+  .list-steps{
+    flex-direction: row;
+    margin-top: 4%;
+  }
+
+  .step-info{
+    display: none;
+  }
+  .list-item {
+    display: flex;
+    align-items: center;
+  }
+
+}
