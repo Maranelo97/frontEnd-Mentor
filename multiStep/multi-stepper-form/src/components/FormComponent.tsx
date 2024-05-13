@@ -20,7 +20,7 @@ const FormComponent = () => {
   const [setlectBox, setSelectedBox] = useState(false);
   const [setlectBox2, setSelectedBox2] = useState(false);
   const [setlectBox3, setSelectedBox3] = useState(false);
-
+  const [isBoxSelected, setISBoxSelected] = useState(false);
   const { setFormFields } = useFormFields();
 
   const { add1Selected, add2Selected, add3Selected, setAddOn } = useAddOns();
@@ -28,10 +28,13 @@ const FormComponent = () => {
   const selectedAddOns = [];
   if (add1Selected)
     selectedAddOns.push({ title: "Online Service", value: "+1/mo" });
+
   if (add2Selected)
     selectedAddOns.push({ title: "Larger Storage", value: "+2/mo" });
+
   if (add3Selected)
     selectedAddOns.push({ title: "Customizable Profile", value: "+2/mo" });
+
 
   const setActiveSteps = useStepStore((state) => state.setActiveStep);
   const activeStep = useStepStore((state) => state.activeStep);
@@ -86,16 +89,19 @@ const FormComponent = () => {
     setSelectedBox(true);
     setSelectedBox2(false);
     setSelectedBox3(false);
+    setISBoxSelected(true);
   };
   const handleSelectBox2 = () => {
     setSelectedBox2(true);
     setSelectedBox(false);
     setSelectedBox3(false);
+    setISBoxSelected(true);
   };
   const handleSelectBox3 = () => {
     setSelectedBox3(true);
     setSelectedBox(false);
     setSelectedBox2(false);
+    setISBoxSelected(true);
   };
   return (
     <div>
@@ -154,9 +160,8 @@ const FormComponent = () => {
               <div className="boxes">
                 <div
                   onClick={handleSelectBox1}
-                  className={`box scale-up-center ${
-                    setlectBox === true ? "box-selected" : ""
-                  }`}
+                  className={`box scale-up-center ${setlectBox === true ? "box-selected" : ""
+                    }`}
                 >
                   <div className="box-content">
                     <img className="box-logo" src={arcade} />
@@ -166,9 +171,8 @@ const FormComponent = () => {
                 </div>
                 <div
                   onClick={handleSelectBox2}
-                  className={`box scale-up-center ${
-                    setlectBox2 === true ? "box-selected" : ""
-                  }`}
+                  className={`box scale-up-center ${setlectBox2 === true ? "box-selected" : ""
+                    }`}
                 >
                   <div className="box-content">
                     <img className="box-logo" src={logoAdv} />
@@ -178,9 +182,8 @@ const FormComponent = () => {
                 </div>
                 <div
                   onClick={handleSelectBox3}
-                  className={`box scale-up-center ${
-                    setlectBox3 === true ? "box-selected" : ""
-                  }`}
+                  className={`box scale-up-center ${setlectBox3 === true ? "box-selected" : ""
+                    }`}
                 >
                   <div className="box-content">
                     <img className="box-logo" src={pro} />
@@ -191,9 +194,8 @@ const FormComponent = () => {
               </div>
               <div className="switcher tracking-in-expand">
                 <span
-                  className={`option no ${
-                    activeSwitch === false ? "option-active" : ""
-                  }`}
+                  className={`option no ${activeSwitch === false ? "option-active" : ""
+                    }`}
                 >
                   Monthly
                 </span>
@@ -202,9 +204,8 @@ const FormComponent = () => {
                   <span className="slider round"></span>
                 </label>
                 <span
-                  className={`option yes ${
-                    activeSwitch === true ? "option-active" : ""
-                  }`}
+                  className={`option yes ${activeSwitch === true ? "option-active" : ""
+                    }`}
                 >
                   Yearly
                 </span>
@@ -221,6 +222,7 @@ const FormComponent = () => {
             <button
               className="button-form scale-up-center"
               onClick={handleIncrease}
+              disabled={!isBoxSelected}
             >
               Next Step
             </button>
@@ -324,10 +326,10 @@ const FormComponent = () => {
                         {setlectBox === true
                           ? "Arcade"
                           : setlectBox2 === true
-                          ? "Advanced"
-                          : setlectBox3 === true
-                          ? "Pro"
-                          : ""}{" "}
+                            ? "Advanced"
+                            : setlectBox3 === true
+                              ? "Pro"
+                              : ""}{" "}
                         {activeSwitch === false ? "(Monthly)" : "(Yearly)"}
                       </h5>
                       <span className="change-plan" onClick={goToSelectionPlan}>
@@ -338,17 +340,17 @@ const FormComponent = () => {
                       {setlectBox === true
                         ? "$9/mo"
                         : setlectBox2 === true
-                        ? "$12/mo"
-                        : setlectBox3 === true
-                        ? "$15/mo"
-                        : ""}
+                          ? "$12/mo"
+                          : setlectBox3 === true
+                            ? "$15/mo"
+                            : ""}
                     </span>
                   </div>
                   <div className="border"></div>
                   {selectedAddOns.length > 0 ? (
-                    selectedAddOns.map((addon, index) => (
+                    selectedAddOns.map((addon, i) => (
                       <div className="list-style">
-                        <p className="list-addons" key={index}>
+                        <p className="list-addons" key={i}>
                           {addon.title}
                         </p>
                         <span>{addon.value}</span>
