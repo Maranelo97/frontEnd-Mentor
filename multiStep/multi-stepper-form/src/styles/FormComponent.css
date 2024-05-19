@@ -179,7 +179,7 @@
 .box {
   border: 1px solid hsl(231, 11%, 63%);
   border-radius: 5px;
-  height: 24vh;
+  height: 16vh;
   width: 100%;
   margin-right: 3%;
   transition: 200ms;
@@ -460,6 +460,7 @@ input:checked+.slider:before {
 
   .form-style {
     padding: 0;
+    height: 55vh;
   }
 
   .title-form {

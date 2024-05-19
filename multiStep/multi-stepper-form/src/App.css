@@ -24,7 +24,7 @@ body {
 }
 
 .aside {
-  height: 73vh;
+  height: 100%;
   width: 40%;
   background-color: hsl(243, 100%, 62%);
   color: #ffffff;
